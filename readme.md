@@ -9,8 +9,8 @@ This project showcases how to monitor deployed Machine Learning models in real-t
 
 | Name                     | Student ID |
 | ------------------------ | ---------- |
-| **Phuc Thuong Nguyen**   | 22521134   |
-| **Cuong Luu Quoc**       | 22520173   |
+| **Quy Nhan Le**   | 22520999   |
+| **Minh Quan Bui**       | 22521173   |
 | **Tien Dat Nguyen Pham** | 22520217   |
 
 ## ⚙️ Architecture
