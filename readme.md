@@ -61,7 +61,12 @@ prometheus_client – Python library to expose metrics
 
 ![demo2](https://github.com/user-attachments/assets/1322cf19-6914-4b41-8688-83c5e35ef641)
 
+![demo3](https://github.com/user-attachments/assets/32156545-0cee-4503-a6c7-fa1d644e355b)
+
+![demo4](https://github.com/user-attachments/assets/75344ef3-97e3-4fc0-b978-e6cc543499ed)
+
 ## Sequence Diagram
+```
 sequenceDiagram
     participant User
     participant Terraform
@@ -83,10 +88,4 @@ sequenceDiagram
     Prometheus->>Grafana: Data Source
     Grafana->>Grafana: Visualize Metrics (Dashboard)
     User->>Grafana: Access Grafana Dashboard (Port 3000)
-
-
-![demo3](https://github.com/user-attachments/assets/32156545-0cee-4503-a6c7-fa1d644e355b)
-
-![demo4](https://github.com/user-attachments/assets/75344ef3-97e3-4fc0-b978-e6cc543499ed)
-
-
+```
