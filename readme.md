@@ -61,6 +61,30 @@ prometheus_client – Python library to expose metrics
 
 ![demo2](https://github.com/user-attachments/assets/1322cf19-6914-4b41-8688-83c5e35ef641)
 
+## Sequence Diagram
+sequenceDiagram
+    participant User
+    participant Terraform
+    participant AWS
+    participant MLflow
+    participant Prometheus
+    participant Grafana
+    participant MLflow_Exporter
+
+    User->>Terraform: Apply Terraform Config (AWS Infra/)
+    Terraform->>AWS: Provision Infrastructure (EC2, VPC, SGs)
+    AWS-->>Terraform: Infrastructure Ready
+    User->>MLflow: Run main.py (Model Training)
+    MLflow->>MLflow: Train Models, Log Metrics/Artifacts
+    MLflow->>MLflow: Register Model
+    MLflow->>MLflow_Exporter: Expose MLflow Metrics
+    MLflow_Exporter->>Prometheus: Expose Metrics (Port 8000)
+    Prometheus->>Prometheus: Scrape Metrics from MLflow_Exporter
+    Prometheus->>Grafana: Data Source
+    Grafana->>Grafana: Visualize Metrics (Dashboard)
+    User->>Grafana: Access Grafana Dashboard (Port 3000)
+
+
 ![demo3](https://github.com/user-attachments/assets/32156545-0cee-4503-a6c7-fa1d644e355b)
 
 ![demo4](https://github.com/user-attachments/assets/75344ef3-97e3-4fc0-b978-e6cc543499ed)
