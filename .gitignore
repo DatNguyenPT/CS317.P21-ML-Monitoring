@@ -1,8 +1,6 @@
 # Local .terraform directories
 **/.terraform/*
 
-MLFlow/tracking_data/*
-
 # .tfstate files
 *.tfstate
 *.tfstate.*
